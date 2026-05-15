@@ -1,0 +1,62 @@
+{
+  "textbooks": [
+    {
+      "pdf": "textbook_1.pdf",
+      "chapters": [
+        {
+          "name": "Chapter 1: Algorithms and Computational Complexity",
+          "start_page": 1,
+          "end_page": 45,
+          "topic": "algorithms"
+        },
+        {
+          "name": "Chapter 2: Data Structures",
+          "start_page": 46,
+          "end_page": 120,
+          "topic": "data_structures"
+        },
+        {
+          "name": "Chapter 3: Computer Architecture",
+          "start_page": 121,
+          "end_page": 180,
+          "topic": "computer_architecture"
+        },
+        {
+          "name": "Chapter 4: Operating Systems",
+          "start_page": 181,
+          "end_page": 250,
+          "topic": "operating_systems"
+        }
+      ]
+    },
+    {
+      "pdf": "textbook_2.pdf",
+      "chapters": [
+        {
+          "name": "Chapter 5: Networks and Protocols",
+          "start_page": 1,
+          "end_page": 85,
+          "topic": "networks"
+        },
+        {
+          "name": "Chapter 6: Databases",
+          "start_page": 86,
+          "end_page": 160,
+          "topic": "databases"
+        },
+        {
+          "name": "Chapter 7: Software Engineering",
+          "start_page": 161,
+          "end_page": 240,
+          "topic": "software_engineering"
+        },
+        {
+          "name": "Chapter 8: Security",
+          "start_page": 241,
+          "end_page": 310,
+          "topic": "security"
+        }
+      ]
+    }
+  ]
+}

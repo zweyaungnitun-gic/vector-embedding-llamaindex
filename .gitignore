@@ -1,0 +1,16 @@
+.env
+.env.local
+firebase-credentials.json
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.vscode/
+.idea/
+*.log
+.DS_Store
+data/textbooks/
+data/past_questions/

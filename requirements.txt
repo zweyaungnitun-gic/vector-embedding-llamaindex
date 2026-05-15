@@ -1,0 +1,9 @@
+llama-index-core
+llama-index-vector-stores-firestore
+llama-index-readers-file
+firebase-admin
+google-genai
+pypdf
+python-dotenv
+pydantic
+click
