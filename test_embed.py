@@ -92,6 +92,7 @@ def verify_firestore_data(test_collection: str = "fe_vector_test") -> bool:
     """Read back stored documents from Firestore and verify."""
     settings = get_settings()
     db = settings.get_firestore_client()
+    logger.info(f"Connecting to database: {settings.custom_database}")
     collection_ref = db.collection(test_collection)
 
     docs = collection_ref.stream()
@@ -131,10 +132,12 @@ def verify_firestore_data(test_collection: str = "fe_vector_test") -> bool:
 
 def main():
     """Run the embedding test."""
-    test_collection = "fe_vector_test"
+    settings = get_settings()
+    test_collection = "fe_textbook_embedding"
 
     logger.info(f"\n{'='*70}")
     logger.info(f"Starting embedding test with sample data...")
+    logger.info(f"Using Firestore database: {settings.custom_database}")
     logger.info(f"{'='*70}\n")
 
     try:

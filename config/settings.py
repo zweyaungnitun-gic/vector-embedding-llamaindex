@@ -11,6 +11,7 @@ class Settings:
         self.google_api_key = os.getenv("GOOGLE_API_KEY")
         self.credentials_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
         self.firestore_collection = os.getenv("FIRESTORE_COLLECTION", "fe_vector_index")
+        self.custom_database = os.getenv("CUSTOM_DATABASE", "it-exam")
 
         if not self.google_api_key:
             raise ValueError("GOOGLE_API_KEY not set in .env")
@@ -35,8 +36,8 @@ class Settings:
             firebase_admin.initialize_app(cred)
 
     def get_firestore_client(self):
-        """Get Firestore client."""
-        return firestore.client()
+        """Get Firestore client for the custom database."""
+        return firestore.client(database_id=self.custom_database)
 
     def embed_texts(self, texts, task_type="RETRIEVAL_DOCUMENT"):
         """Embed texts using Gemini text-embedding-004 model (v1 stable API).
