@@ -66,9 +66,11 @@ python main.py ingest-multiple --source data/textbooks/ --source data/past_quest
 This will:
 1. Load PDFs from the directory
 2. Tag chunks with chapter information (if mapping provided)
-3. Split into semantic chunks (512 tokens, 64 token overlap)
+3. Split into **adaptive semantic chunks** (480-768 tokens by topic, 120-192 overlap)
+   - Chapter-bounded: Chunks respect chapter boundaries for focused questions
+   - Topic-aware: Hardware/Networks get larger chunks (768t), Algorithms/Management get smaller (480-512t)
 4. Generate embeddings using Vertex AI text-embedding-004 (768-dim)
-5. Store in Firestore collection `fe_vector_index`
+5. Store in Firestore collection `fe_vector_index` with enhanced metadata
 
 ## Project Structure
 
@@ -94,9 +96,9 @@ vector-embedding-llamaindex/
 ```
 PDFs (Textbooks + Past Questions)
     ↓
-PDF Loader (SimpleDirectoryReader)
+PDF Loader (SimpleDirectoryReader + Chapter Mapping)
     ↓
-Chunker (SentenceSplitter: 512 tokens, 64 overlap)
+Chunker (SentenceSplitter: Adaptive by Topic, Chapter-Bounded)
     ↓
 Embedder (Vertex AI text-embedding-004: 768 dims)
     ↓

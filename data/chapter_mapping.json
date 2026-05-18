@@ -3,59 +3,56 @@
     {
       "pdf": "textbook_1.pdf",
       "chapters": [
-        {
-          "name": "Chapter 1: Algorithms and Computational Complexity",
-          "start_page": 1,
-          "end_page": 45,
-          "topic": "algorithms"
-        },
-        {
-          "name": "Chapter 2: Data Structures",
-          "start_page": 46,
-          "end_page": 120,
-          "topic": "data_structures"
-        },
-        {
-          "name": "Chapter 3: Computer Architecture",
-          "start_page": 121,
-          "end_page": 180,
-          "topic": "computer_architecture"
-        },
-        {
-          "name": "Chapter 4: Operating Systems",
-          "start_page": 181,
-          "end_page": 250,
-          "topic": "operating_systems"
-        }
+        { "name": "Chapter 1: Basic Configuration of Computers", "start_page": 13, "end_page": 19, "topic": "hardware" },
+        { "name": "Chapter 1: Data Representation in Computers", "start_page": 20, "end_page": 45, "topic": "hardware" },
+        { "name": "Chapter 1: Central Processing Unit and Main Memory Unit", "start_page": 46, "end_page": 77, "topic": "hardware" },
+        { "name": "Chapter 1: Auxiliary Storage", "start_page": 78, "end_page": 91, "topic": "hardware" },
+        { "name": "Chapter 1: Input/Output Unit", "start_page": 92, "end_page": 120, "topic": "hardware" },
+        { "name": "Chapter 2: Processing Type of Information Processing System", "start_page": 121, "end_page": 130, "topic": "systems" },
+        { "name": "Chapter 2: Configuration of High-reliability System", "start_page": 131, "end_page": 136, "topic": "systems" },
+        { "name": "Chapter 2: Evaluation of Information Processing System", "start_page": 137, "end_page": 152, "topic": "systems" },
+        { "name": "Chapter 2: Human Interface", "start_page": 153, "end_page": 168, "topic": "systems" },
+        { "name": "Chapter 2: Multimedia", "start_page": 169, "end_page": 183, "topic": "systems" },
+        { "name": "Chapter 3: Classification of Software", "start_page": 184, "end_page": 195, "topic": "software" },
+        { "name": "Chapter 3: OS (Operating System)", "start_page": 196, "end_page": 210, "topic": "software" },
+        { "name": "Chapter 3: Programming Languages and Language Processors", "start_page": 211, "end_page": 226, "topic": "software" },
+        { "name": "Chapter 3: Files", "start_page": 227, "end_page": 246, "topic": "software" },
+        { "name": "Chapter 4: Outline of Database", "start_page": 247, "end_page": 261, "topic": "database" },
+        { "name": "Chapter 4: SQL", "start_page": 262, "end_page": 278, "topic": "database" },
+        { "name": "Chapter 4: Various Databases", "start_page": 279, "end_page": 288, "topic": "database" },
+        { "name": "Chapter 5: Network Mechanism", "start_page": 289, "end_page": 313, "topic": "network" },
+        { "name": "Chapter 5: Network Architecture", "start_page": 314, "end_page": 318, "topic": "network" },
+        { "name": "Chapter 5: LAN", "start_page": 319, "end_page": 327, "topic": "network" },
+        { "name": "Chapter 5: The Internet", "start_page": 328, "end_page": 340, "topic": "network" },
+        { "name": "Chapter 5: Network Management", "start_page": 341, "end_page": 351, "topic": "network" },
+        { "name": "Chapter 6: Overview of Information Security", "start_page": 352, "end_page": 382, "topic": "security" },
+        { "name": "Chapter 6: Information Security Measures", "start_page": 383, "end_page": 402, "topic": "security" },
+        { "name": "Chapter 7: Data Structure", "start_page": 403, "end_page": 415, "topic": "algorithms" },
+        { "name": "Chapter 7: Basic Algorithm", "start_page": 416, "end_page": 449, "topic": "algorithms" }
       ]
     },
     {
       "pdf": "textbook_2.pdf",
       "chapters": [
-        {
-          "name": "Chapter 5: Networks and Protocols",
-          "start_page": 1,
-          "end_page": 85,
-          "topic": "networks"
-        },
-        {
-          "name": "Chapter 6: Databases",
-          "start_page": 86,
-          "end_page": 160,
-          "topic": "databases"
-        },
-        {
-          "name": "Chapter 7: Software Engineering",
-          "start_page": 161,
-          "end_page": 240,
-          "topic": "software_engineering"
-        },
-        {
-          "name": "Chapter 8: Security",
-          "start_page": 241,
-          "end_page": 310,
-          "topic": "security"
-        }
+        { "name": "Chapter 1: Corporate Activities", "start_page": 11, "end_page": 21, "topic": "management" },
+        { "name": "Chapter 1: Corporate Accounting", "start_page": 22, "end_page": 35, "topic": "management" },
+        { "name": "Chapter 1: Management Science (Applied Math/OR)", "start_page": 36, "end_page": 92, "topic": "management" },
+        { "name": "Chapter 1: Legal Affairs and Standardization", "start_page": 93, "end_page": 130, "topic": "legal" },
+        { "name": "Chapter 2: Business Strategy Management", "start_page": 144, "end_page": 166, "topic": "strategy" },
+        { "name": "Chapter 2: Technological Strategy Management", "start_page": 167, "end_page": 170, "topic": "strategy" },
+        { "name": "Chapter 2: Business Industry (e-business/Engineering)", "start_page": 171, "end_page": 191, "topic": "strategy" },
+        { "name": "Chapter 3: Overview of Information Systems Strategy", "start_page": 198, "end_page": 213, "topic": "systems_strategy" },
+        { "name": "Chapter 3: Information System Planning", "start_page": 214, "end_page": 226, "topic": "systems_strategy" },
+        { "name": "Chapter 4: System Development Technology (SLCP)", "start_page": 233, "end_page": 275, "topic": "development" },
+        { "name": "Chapter 4: Software Development Technology", "start_page": 276, "end_page": 294, "topic": "development" },
+        { "name": "Chapter 4: System Development Environment", "start_page": 295, "end_page": 300, "topic": "development" },
+        { "name": "Chapter 4: Web Application Development", "start_page": 301, "end_page": 303, "topic": "development" },
+        { "name": "Chapter 5: Project Management Overview", "start_page": 310, "end_page": 315, "topic": "project_management" },
+        { "name": "Chapter 5: Subject Group Management (Scope/Time/Cost)", "start_page": 316, "end_page": 338, "topic": "project_management" },
+        { "name": "Chapter 6: Overview of Service Management (ITIL)", "start_page": 344, "end_page": 349, "topic": "service_management" },
+        { "name": "Chapter 6: Method of Service Management", "start_page": 350, "end_page": 371, "topic": "service_management" },
+        { "name": "Chapter 7: System Audit", "start_page": 378, "end_page": 385, "topic": "audit" },
+        { "name": "Chapter 7: Internal Control and IT Governance", "start_page": 386, "end_page": 389, "topic": "audit" }
       ]
     }
   ]
