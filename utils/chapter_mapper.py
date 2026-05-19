@@ -7,10 +7,11 @@ from dataclasses import dataclass
 @dataclass
 class Chapter:
     """Represents a chapter in a textbook."""
+    chapter: str
+    topic: str
     name: str
     start_page: int
     end_page: int
-    topic: str
 
 
 @dataclass
@@ -39,15 +40,19 @@ def load_chapter_mapping(mapping_file: str) -> Dict[str, TextbookSource]:
     sources = {}
     for textbook in data.get("textbooks", []):
         pdf_name = textbook["pdf"]
-        chapters = [
-            Chapter(
-                name=ch["name"],
-                start_page=ch["start_page"],
-                end_page=ch["end_page"],
-                topic=ch["topic"]
-            )
-            for ch in textbook.get("chapters", [])
-        ]
+        chapters = []
+        for key, value in textbook.items():
+            if key != "pdf" and isinstance(value, list):
+                for ch in value:
+                    chapters.append(
+                        Chapter(
+                            chapter=ch.get("chapter", ""),
+                            topic=ch.get("topic", ""),
+                            name=ch.get("name", ""),
+                            start_page=ch.get("start_page", 0),
+                            end_page=ch.get("end_page", 0)
+                        )
+                    )
         sources[pdf_name] = TextbookSource(pdf=pdf_name, chapters=chapters)
 
     return sources

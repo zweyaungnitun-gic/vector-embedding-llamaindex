@@ -60,6 +60,58 @@ class Settings:
 
         return embeddings
 
+    def embed_images(self, image_data_list):
+        """Embed images using Gemini's multimodal embedding capability.
+
+        Args:
+            image_data_list: List of image data (file paths, base64, or bytes)
+
+        Returns:
+            List[List[float]] - Image embeddings (768-dim vectors)
+        """
+        import base64
+        from pathlib import Path
+        
+        embeddings = []
+        for image_data in image_data_list:
+            try:
+                # If it's a file path, read and encode
+                if isinstance(image_data, str) and Path(image_data).exists():
+                    with open(image_data, "rb") as img_file:
+                        image_bytes = img_file.read()
+                    image_b64 = base64.standard_b64encode(image_bytes).decode("utf-8")
+                    mime_type = "image/jpeg" if image_data.lower().endswith((".jpg", ".jpeg")) else "image/png"
+                # If it's already base64, use as is
+                elif isinstance(image_data, str):
+                    image_b64 = image_data
+                    mime_type = "image/jpeg"
+                # If it's bytes, encode
+                else:
+                    image_b64 = base64.standard_b64encode(image_data).decode("utf-8")
+                    mime_type = "image/jpeg"
+                
+                # Create image content with MIME type
+                image_content = {
+                    "inline_data": {
+                        "mime_type": mime_type,
+                        "data": image_b64
+                    }
+                }
+                
+                # Embed using Gemini's multimodal capability
+                response = self.genai_client.models.embed_content(
+                    model="gemini-embedding-001",
+                    contents=[image_content]
+                )
+                
+                embedding = response.embeddings[0].values
+                embeddings.append(embedding)
+                
+            except Exception as e:
+                raise ValueError(f"Error embedding image: {e}")
+        
+        return embeddings
+
 _settings = None
 
 def get_settings() -> Settings:

@@ -7,3 +7,7 @@ pypdf
 python-dotenv
 pydantic
 click
+Pillow
+pymupdf
+pytesseract
+numpy

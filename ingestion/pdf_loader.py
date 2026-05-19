@@ -92,12 +92,13 @@ def load_textbooks_with_chapters(
             if page_num:
                 chapter = get_chapter_for_page(pdf_name, page_num, mapping)
                 if chapter:
-                    doc.metadata["chapter"] = chapter.name
+                    doc.metadata["chapter"] = chapter.chapter
                     doc.metadata["topic"] = chapter.topic
-                    doc.metadata["chapter_start"] = chapter.start_page
-                    doc.metadata["chapter_end"] = chapter.end_page
+                    doc.metadata["name"] = chapter.name
+                    doc.metadata["start_page"] = chapter.start_page
+                    doc.metadata["end_page"] = chapter.end_page
 
-            doc.metadata["source"] = pdf_name
+            doc.metadata["pdf"] = pdf_name
             doc.metadata["doc_type"] = "concept"
             doc.metadata["page"] = page_num or 0
 

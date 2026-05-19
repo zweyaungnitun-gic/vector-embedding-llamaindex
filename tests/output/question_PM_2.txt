@@ -1,0 +1,15 @@
+parts=[Part(
+  text="""```json
+{
+  "question": "A network administrator is tasked with assigning an IP address class for a new network that is described as 'very large.' According to standard IP classification, which class is most appropriately assigned to large networks?",
+  "options": [
+    "Class A",
+    "Class B",
+    "Class C",
+    "Class D"
+  ],
+  "answer_index": 0,
+  "explanation": "According to the provided context, 'Class A' is assigned to large networks. 'Class B' is assigned to medium- to large-sized networks, making Class A the most appropriate for 'very large' networks. Class C is typically for small networks, and Class D is reserved for multicast."
+}
+```"""
+)] role='model'

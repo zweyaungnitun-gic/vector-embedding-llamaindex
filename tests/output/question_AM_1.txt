@@ -1,0 +1,15 @@
+parts=[Part(
+  text="""```json
+{
+  "question": "A network administrator is designing an IP addressing scheme for a new, expansive corporate network that is anticipated to grow to include several million hosts. According to standard IPv4 class assignments, which IP address class is best suited for this type of very large network?",
+  "options": [
+    "Class A",
+    "Class B",
+    "Class C",
+    "Class D"
+  ],
+  "answer_index": 0,
+  "explanation": "Class A IP addresses are designed for very large networks, capable of supporting approximately 16 million unique hosts (2^24 - 2). This aligns with the requirement for a network expanding to several million hosts and the textbook context stating, 'Class A: This class is assigned to large networks.' Class B is for medium- to large-sized networks (supporting up to 65,534 hosts), Class C is for small networks (supporting up to 254 hosts), and Class D is reserved for multicasting, not for assigning to individual hosts in a typical network."
+}
+```"""
+)] role='model'

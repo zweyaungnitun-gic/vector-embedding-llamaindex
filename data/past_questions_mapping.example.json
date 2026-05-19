@@ -1,0 +1,38 @@
+{
+  "exam_sources": [
+    {
+      "pdf": "FE_OQ1.pdf",
+      "questions": [
+        {
+          "question_id": "Q001",
+          "year": 2023,
+          "exam_type": "FE",
+          "session": "AM",
+          "topic": "Hardware",
+          "difficulty": "medium"
+        },
+        {
+          "question_id": "Q002",
+          "year": 2023,
+          "exam_type": "FE",
+          "session": "AM",
+          "topic": "Network",
+          "difficulty": "hard"
+        }
+      ]
+    },
+    {
+      "pdf": "FE_OQ2.pdf",
+      "questions": [
+        {
+          "question_id": "Q103",
+          "year": 2022,
+          "exam_type": "FE",
+          "session": "PM",
+          "topic": "Database",
+          "difficulty": "easy"
+        }
+      ]
+    }
+  ]
+}

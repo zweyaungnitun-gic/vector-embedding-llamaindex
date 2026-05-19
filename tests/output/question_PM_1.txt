@@ -1,0 +1,15 @@
+parts=[Part(
+  text="""```json
+{
+  "question": "Which network class is primarily designated for large networks?",
+  "options": [
+    "Class A",
+    "Class B",
+    "Class C",
+    "Class D"
+  ],
+  "answer_index": 0,
+  "explanation": "According to the provided textbook context, 'Class A: This class is assigned to large networks.' Class B is assigned to medium- to large-sized networks, making Class A the primary designation for large networks specifically."
+}
+```"""
+)] role='model'
