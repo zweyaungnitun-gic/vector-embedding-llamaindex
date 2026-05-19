@@ -119,7 +119,14 @@ def build_prompt(topic: str, textbook_contexts: List[Dict[str, Any]], past_examp
         ex_text = ex.get("doc", {}).get("text") or ex.get("doc", {}).get("content") or ex.get("doc", {}).get("question") or "(image)"
         prompt.append(f"[Past-{i}] {ex_text[:400]}")
 
-    prompt.append("\nProduce output in JSON with keys: question, options (list of 4 strings), answer_index (0-3), explanation.")
+    prompt.append("\nProduce output strictly as a JSON object (do not include Markdown wrappers like ```json).")
+    prompt.append("Ensure the JSON has the following keys:")
+    prompt.append("- question (string)")
+    prompt.append("- options (list of 4 strings)")
+    prompt.append("- answer_index (integer 0-3)")
+    prompt.append("- explanation (string)")
+    prompt.append("- requires_image (boolean, true if the question needs a logic gate, flowchart, network topology diagram, etc.)")
+    prompt.append("- mermaid_diagram (string, valid Mermaid.js syntax for the diagram if requires_image is true, omitting wrapping code blocks. Set to empty string if not required)")
     prompt.append("Make distractors plausible and aligned with FE exam style.")
 
     return "\n\n".join(prompt)

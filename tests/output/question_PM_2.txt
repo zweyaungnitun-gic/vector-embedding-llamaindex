@@ -1,15 +1,15 @@
 parts=[Part(
-  text="""```json
-{
-  "question": "A network administrator is tasked with assigning an IP address class for a new network that is described as 'very large.' According to standard IP classification, which class is most appropriately assigned to large networks?",
+  text="""{
+  "question": "Which of the following statements accurately describes the assignment of IP address classes to network sizes based on standard classifications?",
   "options": [
-    "Class A",
-    "Class B",
-    "Class C",
-    "Class D"
+    "Class A is primarily assigned to large networks.",
+    "Class A is primarily assigned to medium- to large-sized networks.",
+    "Class B is primarily assigned to small networks.",
+    "Both Class A and Class B are exclusively assigned to small networks."
   ],
   "answer_index": 0,
-  "explanation": "According to the provided context, 'Class A' is assigned to large networks. 'Class B' is assigned to medium- to large-sized networks, making Class A the most appropriate for 'very large' networks. Class C is typically for small networks, and Class D is reserved for multicast."
-}
-```"""
+  "explanation": "According to the provided textbook context, 'Class A This class is assigned to large networks.' and 'Class B This class is assigned to medium- to large-sized networks.' Therefore, the statement that Class A is primarily assigned to large networks is correct.",
+  "requires_image": false,
+  "mermaid_diagram": ""
+}"""
 )] role='model'

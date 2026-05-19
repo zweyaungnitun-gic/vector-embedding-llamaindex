@@ -1,15 +1,17 @@
 parts=[Part(
   text="""```json
 {
-  "question": "A network administrator is designing an IP addressing scheme for a new, expansive corporate network that is anticipated to grow to include several million hosts. According to standard IPv4 class assignments, which IP address class is best suited for this type of very large network?",
+  "question": "What is the Boolean expression F represented by the logic circuit diagram below?",
   "options": [
-    "Class A",
-    "Class B",
-    "Class C",
-    "Class D"
+    "F = X ⋅ Y",
+    "F = X + Y",
+    "F = (¬X ⋅ Y) + (X ⋅ ¬Y)",
+    "F = (¬X ⋅ ¬Y) + (X ⋅ Y)"
   ],
-  "answer_index": 0,
-  "explanation": "Class A IP addresses are designed for very large networks, capable of supporting approximately 16 million unique hosts (2^24 - 2). This aligns with the requirement for a network expanding to several million hosts and the textbook context stating, 'Class A: This class is assigned to large networks.' Class B is for medium- to large-sized networks (supporting up to 65,534 hosts), Class C is for small networks (supporting up to 254 hosts), and Class D is reserved for multicasting, not for assigning to individual hosts in a typical network."
+  "answer_index": 2,
+  "explanation": "To determine the Boolean expression, we trace the signals through the circuit:\n1.  Inputs X and Y are provided.\n2.  X passes through a NOT gate, producing ¬X.\n3.  Y passes through a NOT gate, producing ¬Y.\n4.  The first AND gate takes inputs ¬X and Y, yielding the term (¬X ⋅ Y).\n5.  The second AND gate takes inputs X and ¬Y, yielding the term (X ⋅ ¬Y).\n6.  Finally, an OR gate combines the outputs of the two AND gates. Therefore, the final expression F is (¬X ⋅ Y) + (X ⋅ ¬Y). This expression is the definition of an Exclusive OR (XOR) gate.",
+  "requires_image": true,
+  "mermaid_diagram": "graph TD\n    X[X] --> NX\n    Y[Y] --> NY\n\n    NX[NOT] --> A1_IN1\n    Y --> A1_IN2\n    X --> A2_IN1\n    NY[NOT] --> A2_IN2\n\n    A1_IN1 --> A1(AND)\n    A1_IN2 --> A1\n    A1 --> O1\n\n    A2_IN1 --> A2(AND)\n    A2_IN2 --> A2\n    A2 --> O2\n\n    O1 --> OR_GATE(OR)\n    O2 --> OR_GATE\n    OR_GATE --> F(F)"
 }
 ```"""
 )] role='model'

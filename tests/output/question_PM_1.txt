@@ -1,15 +1,15 @@
 parts=[Part(
-  text="""```json
-{
-  "question": "Which network class is primarily designated for large networks?",
+  text="""{
+  "question": "Based on standard network classification, Class A networks are primarily assigned to which type of network?",
   "options": [
-    "Class A",
-    "Class B",
-    "Class C",
-    "Class D"
+    "Large networks.",
+    "Medium- to large-sized networks.",
+    "Small local area networks (LANs).",
+    "Networks requiring specific subnetting for 256 or fewer hosts."
   ],
   "answer_index": 0,
-  "explanation": "According to the provided textbook context, 'Class A: This class is assigned to large networks.' Class B is assigned to medium- to large-sized networks, making Class A the primary designation for large networks specifically."
-}
-```"""
+  "explanation": "According to Textbook-4, Class A networks are explicitly 'assigned to large networks.' Class B networks, in contrast, are assigned to 'medium- to large-sized networks,' making option (b) incorrect. Options (c) and (d) describe network sizes or configurations that are not characteristic of Class A networks, which are designed to support a very large number of hosts.",
+  "requires_image": false,
+  "mermaid_diagram": ""
+}"""
 )] role='model'

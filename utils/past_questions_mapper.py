@@ -83,6 +83,19 @@ def get_question_metadata_from_filename(pdf_name: str) -> Dict[str, Any]:
         "session": ""
     }
 
+    pdf_lower = pdf_name.lower()
+    
+    # Automatically map to AM/PM based on new filename formats (e.g. 2024A_FE-A_Questions)
+    if "-a_" in pdf_lower or pdf_lower.startswith("a_") or "am" in pdf_lower or "oq1" in pdf_lower:
+        metadata["session"] = "AM"
+    elif "-b_" in pdf_lower or pdf_lower.startswith("b_") or "pm" in pdf_lower or "oq2" in pdf_lower:
+        metadata["session"] = "PM"
+
+    import re
+    year_match = re.search(r'(20\d{2})', pdf_name)
+    if year_match:
+        metadata["year"] = int(year_match.group(1))
+
     # Try to extract year and exam type from filename
     parts = pdf_name.replace(".pdf", "").split("_")
     try:

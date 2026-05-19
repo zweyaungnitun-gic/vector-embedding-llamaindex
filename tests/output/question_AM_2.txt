@@ -1,7 +1,6 @@
 parts=[Part(
-  text="""```json
-{
-  "question": "An organization is planning a new network infrastructure that requires an IP addressing scheme capable of supporting a very large number of hosts, effectively needing the largest possible address space for individual devices within a single network. Based on standard IP addressing classifications, which network class would be most appropriate for this requirement?",
+  text="""{
+  "question": "Based on IP addressing standards, which IP address class is primarily allocated for very large networks?",
   "options": [
     "Class A",
     "Class B",
@@ -9,7 +8,8 @@ parts=[Part(
     "Class D"
   ],
   "answer_index": 0,
-  "explanation": "Class A networks are designed for very large networks, providing the greatest number of host addresses (over 16 million unique hosts) per network, making them ideal for scenarios requiring the maximum possible address space for individual devices. Class B networks are assigned to medium- to large-sized networks, offering a significant but smaller number of host addresses (over 65,000). Class C networks are for small networks (up to 254 hosts), and Class D is reserved for multicasting, not for assigning to a large number of individual hosts."
-}
-```"""
+  "explanation": "According to standard IP addressing conventions, Class A is assigned to very large networks, enabling them to support a vast number of hosts. Class B is for medium- to large-sized networks, Class C for small networks, and Class D is reserved for multicast purposes.",
+  "requires_image": false,
+  "mermaid_diagram": ""
+}"""
 )] role='model'
